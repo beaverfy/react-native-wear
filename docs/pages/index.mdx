@@ -1,0 +1,47 @@
+import { Callout } from 'nextra-theme-docs';
+import { Card, Cards } from 'nextra/components';
+import { Icon } from '../components/icon';
+
+<div className="flexRow">
+    <img
+    src="/react-native-wear.png"
+    className="flexRowImage"
+    />
+    <div>
+
+    # React Native Wear
+    React Native Module for interacting with Wear OS via React Native
+
+    </div>
+
+</div>
+
+<Callout type="warning">
+  This documentation is still being worked on, some data might be inaccurate, or
+  not correct at all.
+</Callout>
+<Callout type="info">
+  `react-native-wear` is a fork of
+  [`react-native-android-wear`](https://github.com/fabOnReact/react-native-android-wear)
+  that uses modern promises instead of callbacks
+</Callout>
+
+## Getting Started
+
+<Cards>
+  <Card
+    icon={<Icon name="download" />}
+    title="Installation"
+    href="/installation"
+  />
+  <Card
+    icon={<Icon name="flag" />}
+    title="Getting Started"
+    href="/guides/getting-started"
+  />
+  <Card
+    icon={<Icon name="sensors" />}
+    title="Receiving Data"
+    href="/guides/receiving-data"
+  />
+</Cards>

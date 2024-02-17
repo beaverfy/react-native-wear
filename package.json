@@ -1,7 +1,7 @@
 {
   "name": "react-native-wear-connectivity",
   "version": "0.1.5",
-  "description": "Enstablish a two-way connection with wearOS",
+  "description": "React Native Module for interacting with Wear OS via React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",

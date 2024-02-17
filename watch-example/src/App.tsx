@@ -24,7 +24,7 @@ export default function App() {
   const onError: ErrorCallback = (error) => console.log(error);
   const sendMessageToPhone = () => {
     const json = { text: 'hello' };
-    sendMessage(json, onSuccess, onError);
+    sendMessage(json).then(onSuccess).catch(onError);
   };
 
   return (

@@ -22,13 +22,13 @@ https://github.com/fabOnReact/react-native-wear-connectivity/assets/24992535/415
 ## Installation
 
 ```sh
-yarn add react-native-wear-connectivity
+yarn add react-native-wear
 ```
 
 or
 
 ```sh
-npm install react-native-wear-connectivity
+npm install react-native-wear
 ```
 
 ## Example of implementation
@@ -38,7 +38,7 @@ Implementation of the above counter application.
 ```js
 import React, { useEffect, useState } from 'react';
 import { View, Text, Button } from 'react-native';
-import { sendMessage, watchEvents } from 'react-native-wear-connectivity';
+import { sendMessage, watchEvents } from 'react-native-wear';
 
 function CounterScreen() {
   const [count, setCount] = useState(0);

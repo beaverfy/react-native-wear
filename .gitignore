@@ -80,3 +80,8 @@ example/.env
 watch-example/.env
 example/ios/.xcode.env.local
 gh-md-toc
+
+# yarn
+.yarn/cache
+docs/.next
+docs/.yarn/cache

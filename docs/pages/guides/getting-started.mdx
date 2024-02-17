@@ -1,0 +1,44 @@
+import { Callout } from 'nextra-theme-docs';
+import { Steps } from 'nextra/components';
+
+# Getting Started
+
+## Creating your Wear OS app [#wear-os-setup]
+
+<Callout type="info">
+  We recommend having a `/wear` directory alongside your `/src` or `/app`
+  directory, this will make it easier to build and develop your app.
+</Callout>
+
+Start by adding a Wear OS app to your project, you can use Android Studio's Wear OS template, we recommend using the template with a tile, but if you think you do not require a tile then pick just the app.
+
+## Ready your React Native app
+
+<Steps>
+### Package Name
+Make sure your React Native app and your Wear OS app both share the same package name.
+ 
+### Signing Key
+Make sure your React Native app and your Wear OS app both use the same signing key when publishing your app.
+
+- If you're developing, you can leave both unsigned
+- If you're using expo you can use `eas credentials`
+
+</Steps>
+
+## Sending data to your Wear OS app [#sending-data]
+
+Start sending data to your Wear OS app by using `sendDataToClient`:
+
+```tsx
+import { sendMessage } from 'react-native-wear';
+
+await sendMessage({
+  message: 'Hello there :)',
+  // ...
+});
+```
+
+<Callout type="info">
+  `sendMessage` accepts an object with any key/values
+</Callout>

@@ -1,0 +1,12 @@
+# Receiving Data
+
+You may want to receive data from your Wear OS client, to receive data, set up a listener using `watchEvents`:
+
+```tsx
+import { watchEvents } from 'react-native-wear';
+
+const unsubscribe = watchEvents.on('message', (message) => {
+  // message is an object of the data
+  // received from the watch
+});
+```

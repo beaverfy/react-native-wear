@@ -19,7 +19,7 @@ function CounterScreen() {
 
   const sendMessageToWear = () => {
     const json = { text: 'hello', event: 'message' };
-    sendMessage(json, onSuccess, onError);
+    sendMessage(json).then(onSuccess).catch(onError);
   };
 
   return (
