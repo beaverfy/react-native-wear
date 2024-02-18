@@ -29,7 +29,7 @@ import org.json.JSONObject;
 public class WearConnectivityModule extends WearConnectivitySpec
     implements MessageClient.OnMessageReceivedListener, LifecycleEventListener {
   public static final String NAME = "WearConnectivity";
-  private static final String TAG = "WearConnectivityModule ";
+  private static final String TAG = "WearConnectivityModule";
   private final MessageClient client;
   private String CLIENT_ADDED =
       TAG + "onMessageReceived listener added when activity is created. Client receives messages.";

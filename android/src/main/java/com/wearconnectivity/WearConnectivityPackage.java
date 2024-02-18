@@ -12,7 +12,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class WearConnectivityPackage extends TurboReactPackage {
-
   @Nullable
   @Override
   public NativeModule getModule(String name, ReactApplicationContext reactContext) {

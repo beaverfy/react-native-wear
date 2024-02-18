@@ -1,12 +1,12 @@
 import { Platform } from 'react-native';
-import type { SendMessage, Payload } from './NativeWearConnectivity';
+import type { Payload, AsyncSendMessage } from './NativeWearConnectivity';
 import { WearConnectivity } from './index';
 import { LIBRARY_NAME, IOS_NOT_SUPPORTED_WARNING } from './constants';
 
 /*
   New promise based system
  */
-const sendMessage: SendMessage = (message) => {
+const sendMessage: AsyncSendMessage = (message) => {
   return new Promise<Payload>((resolve, reject) => {
     const json: Payload = { ...message, event: 'message' };
     return WearConnectivity.sendMessage(
@@ -17,14 +17,14 @@ const sendMessage: SendMessage = (message) => {
   });
 };
 
-const sendMessageMock: SendMessage = () => {
+const sendMessageMock: AsyncSendMessage = () => {
   return new Promise<{}>((_, reject) => {
     console.warn(LIBRARY_NAME + 'message' + IOS_NOT_SUPPORTED_WARNING);
     reject(LIBRARY_NAME + 'message' + IOS_NOT_SUPPORTED_WARNING);
   });
 };
 
-let sendMessageExport: SendMessage = sendMessageMock;
+let sendMessageExport: AsyncSendMessage = sendMessageMock;
 if (Platform.OS !== 'ios') {
   sendMessageExport = sendMessage;
 }
