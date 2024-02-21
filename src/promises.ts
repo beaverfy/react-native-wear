@@ -7,18 +7,18 @@ import { LIBRARY_NAME, IOS_NOT_SUPPORTED_WARNING } from './constants';
   New promise based system
  */
 const sendMessage: AsyncSendMessage = (message) => {
-  return new Promise<Payload>((resolve, reject) => {
+  return new Promise<string>((resolve, reject) => {
     const json: Payload = { ...message, event: 'message' };
     return WearConnectivity.sendMessage(
       json,
-      (reply: Payload) => resolve(reply),
+      (reply: string) => resolve(reply),
       (err: string) => reject(err)
     );
   });
 };
 
 const sendMessageMock: AsyncSendMessage = () => {
-  return new Promise<{}>((_, reject) => {
+  return new Promise<string>((_, reject) => {
     console.warn(LIBRARY_NAME + 'message' + IOS_NOT_SUPPORTED_WARNING);
     reject(LIBRARY_NAME + 'message' + IOS_NOT_SUPPORTED_WARNING);
   });

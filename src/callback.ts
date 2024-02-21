@@ -10,7 +10,7 @@ const UNHANDLED_CALLBACK_REPLY =
 const UNHANDLED_CALLBACK_ERROR =
   'The callback function was invoked with the error: ';
 
-const defaultReplyCb = (reply: Payload) => {
+const defaultReplyCb = (reply: string) => {
   console.log(UNHANDLED_CALLBACK + UNHANDLED_CALLBACK_REPLY, reply);
 };
 const defaultErrCb = (err: string) => {

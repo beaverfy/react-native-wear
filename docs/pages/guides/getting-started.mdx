@@ -10,7 +10,12 @@ import { Steps, Tabs } from 'nextra/components';
   directory, this will make it easier to build and develop your app.
 </Callout>
 
-Start by adding a Wear OS app to your project, you can use Android Studio's Wear OS template, we recommend using the template with a tile, but if you think you do not require a tile then pick just the app.
+Start by adding a Wear OS app to your project, you can use Android Studio's Wear OS template or use the react native example.
+
+<Callout type="error">
+  Using React Native on Wear OS isn't recommended since there's no native
+  component libraries available
+</Callout>
 
 ## Ready your React Native app
 
@@ -40,8 +45,8 @@ await sendMessageAsync({
   message: 'Hello there :)',
   // ...
 })
-  .then(() => console.log('Message sent'))
-  .catch(() => console.log('Failed to send message'));
+  .then((reply) => console.log('Message sent', reply))
+  .catch((error) => console.log('Failed to send message', error));
 ```
 
 </Tabs.Tab>
@@ -55,8 +60,8 @@ await sendMessage(
     message: 'Hello there :)',
     // ...
   },
-  () => console.log('Message sent'),
-  () => console.log('Failed to send message')
+  (reply) => console.log('Message sent', reply),
+  (error) => console.log('Failed to send message', error)
 );
 ```
 

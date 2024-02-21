@@ -3,7 +3,7 @@ import { TurboModuleRegistry } from 'react-native';
 
 // Messages
 export type Payload = {};
-export type ReplyCallback = (reply: Payload) => void;
+export type ReplyCallback = (reply: string) => void;
 export type ErrorCallback = (err: string) => void;
 
 export type SendMessage = (
@@ -12,7 +12,7 @@ export type SendMessage = (
   errCb: ErrorCallback
 ) => void;
 
-export type AsyncSendMessage = (message: Payload) => Promise<Payload>;
+export type AsyncSendMessage = (message: Payload) => Promise<string>;
 
 export interface Spec extends TurboModule {
   sendMessage: SendMessage;
