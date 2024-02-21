@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
-import { sendMessage, watchEvents } from 'react-native-wear-connectivity';
+import { sendMessageAsync, watchEvents } from 'react-native-wear-connectivity';
 import type {
   ReplyCallback,
   ErrorCallback,
@@ -24,7 +24,7 @@ export default function App() {
   const onError: ErrorCallback = (error) => console.log(error);
   const sendMessageToPhone = () => {
     const json = { text: 'hello' };
-    sendMessage(json).then(onSuccess).catch(onError);
+    sendMessageAsync(json).then(onSuccess).catch(onError);
   };
 
   return (

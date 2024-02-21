@@ -1,5 +1,5 @@
 import { Callout } from 'nextra-theme-docs';
-import { Steps } from 'nextra/components';
+import { Steps, Tabs } from 'nextra/components';
 
 # Getting Started
 
@@ -28,16 +28,40 @@ Make sure your React Native app and your Wear OS app both use the same signing k
 
 ## Sending data to your Wear OS app [#sending-data]
 
-Start sending data to your Wear OS app by using `sendMessage`:
+Start sending data to your Wear OS app by using `sendMessage` or `sendMessageAsync`:
+
+<Tabs items={['Promises', 'Callbacks']}>
+  <Tabs.Tab>
+
+```tsx
+import { sendMessageAsync } from 'react-native-wear';
+
+await sendMessageAsync({
+  message: 'Hello there :)',
+  // ...
+})
+  .then(() => console.log('Message sent'))
+  .catch(() => console.log('Failed to send message'));
+```
+
+</Tabs.Tab>
+<Tabs.Tab>
 
 ```tsx
 import { sendMessage } from 'react-native-wear';
 
-await sendMessage({
-  message: 'Hello there :)',
-  // ...
-});
+await sendMessage(
+  {
+    message: 'Hello there :)',
+    // ...
+  },
+  () => console.log('Message sent'),
+  () => console.log('Failed to send message')
+);
 ```
+
+  </Tabs.Tab>
+</Tabs>
 
 <Callout type="info">
   `sendMessage` accepts an object with any key/values

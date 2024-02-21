@@ -29,4 +29,4 @@ if (Platform.OS !== 'ios') {
   sendMessageExport = sendMessage;
 }
 
-export { sendMessageExport as sendMessage };
+export { sendMessageExport as sendMessageAsync };

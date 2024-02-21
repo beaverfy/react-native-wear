@@ -28,6 +28,7 @@
   "scripts": {
     "example": "yarn workspace react-native-phone-connectivity-example",
     "watch-example": "yarn workspace react-native-wear-connectivity-example",
+    "docs": "yarn workspace docs",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
@@ -87,7 +88,8 @@
   },
   "workspaces": [
     "example",
-    "watch-example"
+    "watch-example",
+    "docs"
   ],
   "packageManager": "yarn@4.1.0",
   "engines": {

@@ -1,6 +1,7 @@
 import { NativeModules, Platform } from 'react-native';
 import { watchEvents } from './subscriptions';
-import { sendMessage } from './messages';
+import { sendMessage } from './callback';
+import { sendMessageAsync } from './promises';
 import type { ReplyCallback, ErrorCallback } from './NativeWearConnectivity';
 
 const LINKING_ERROR =
@@ -27,5 +28,5 @@ const WearConnectivity = WearConnectivityModule
       }
     );
 
-export { sendMessage, watchEvents, WearConnectivity };
+export { sendMessage, sendMessageAsync, watchEvents, WearConnectivity };
 export type { ReplyCallback, ErrorCallback };

@@ -27,8 +27,8 @@ const config: DocsThemeConfig = {
   logo: (
     <>
       <img
-        src="/react-native-wear.png"
-        width="20"
+        src="/icon.png"
+        width="40"
         alt="React Native Wear"
         // eslint-disable-next-line react-native/no-inline-styles
         style={{ marginRight: '10px' }}

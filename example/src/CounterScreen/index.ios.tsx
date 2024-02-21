@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { View, StyleSheet, Text, Button } from 'react-native';
-import { sendMessage, watchEvents } from '../../../src/index';
+import { sendMessageAsync, watchEvents } from '../../../src/index';
 import type { ReplyCallback, ErrorCallback } from '../../../src/index';
 
 function CounterScreen() {
@@ -19,7 +19,7 @@ function CounterScreen() {
 
   const sendMessageToWear = () => {
     const json = { text: 'hello', event: 'message' };
-    sendMessage(json).then(onSuccess).catch(onError);
+    sendMessageAsync(json).then(onSuccess).catch(onError);
   };
 
   return (
