@@ -1,6 +1,6 @@
 {
   "name": "react-native-wear",
-  "version": "1.0.12",
+  "version": "1.1.0",
   "description": "React Native Module for interacting with Wear OS via React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
