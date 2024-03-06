@@ -1,6 +1,6 @@
 {
-  "name": "react-native-wear-connectivity",
-  "version": "0.1.5",
+  "name": "react-native-wear",
+  "version": "1.0.12",
   "description": "React Native Module for interacting with Wear OS via React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -45,12 +45,11 @@
     "type": "git",
     "url": "git+https://github.com/fabOnReact/react-native-wear-connectivity.git"
   },
-  "author": "Fabrizio Bertoglio <fabrizio.bertoglio@gmail.com> (https://github.com/fabOnReact)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fabOnReact/react-native-wear-connectivity/issues"
+    "url": "https://github.com/beaverfy/react-native-wear/issues"
   },
-  "homepage": "https://github.com/fabOnReact/react-native-wear-connectivity#readme",
+  "homepage": "https://github.com/beaverfy/react-native-wear#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

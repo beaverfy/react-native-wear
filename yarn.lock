@@ -14236,9 +14236,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"react-native-wear-connectivity@workspace:.":
+"react-native-wear@workspace:.":
   version: 0.0.0-use.local
-  resolution: "react-native-wear-connectivity@workspace:."
+  resolution: "react-native-wear@workspace:."
   dependencies:
     "@commitlint/config-conventional": "npm:^17.0.2"
     "@react-native/eslint-config": "npm:^0.72.2"
